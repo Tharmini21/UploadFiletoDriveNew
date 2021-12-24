@@ -1,0 +1,23 @@
+{
+  "name": "Uploadfiletodrive",
+  "version": "1.0.0",
+  "private": true,
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "account": "extension-scripts account",
+    "build": "extension-scripts build",
+    "deploy": "extension-scripts deploy",
+    "revoke": "extension-scripts revoke",
+    "logs": "extension-scripts logs"
+  },
+  "dependencies": {
+    "@smartsheet-bridge/extension-handler": "^0.1.2"
+  },
+  "devDependencies": {
+    "@smartsheet-bridge/extension-scripts": "^0.1.2",
+    "typescript": "^4.5.4"
+  }
+}
