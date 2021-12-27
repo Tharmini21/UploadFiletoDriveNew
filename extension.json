@@ -1,92 +1,89 @@
 {
-    "name": "Uploadfile",
-    "displayName": "Upload File",
-    "needsOAuth": true,
-    "uiSpec": {
-      "providerTabs": [
-        {
-          "type": "OAUTH2",
-          "saveBtn": false,
-          "enable": "hasAgreed || isRegistered",
-          "default": "isRegistered",
-          "nextTab": 1
-        },
-        {
-          "type": "SETTINGS",
-          "text": "Setup",
-          "enable": "isAuthorized",
-          "nextTab": true,
-          "default": "isAuthorized",
-          "params": [
-            "app"
-          ]
-        }
-      ]
-    },
-    "providerData": [
+  "name": "Uploadfile",
+  "displayName": "Upload File",
+  "needsOAuth": true,
+  "uiSpec": {
+    "providerTabs": [
       {
-        "param": "app",
-        "displayName": "Connect your Drive Account",
-        "description": "",
-        "type": "PARAM",
-        "optional": false,
-        "valueParams": [
-          {
-            "param": "client_id",
-            "displayName": "Client Id",
-            "description": "Enter Drive Client Id",
-            "type": "STRING"
-          },
-          {
-            "param": "client_secret",
-            "displayName": "Client Secret",
-            "description": "Enter the Client Secret",
-            "type": "STRING",
-            "optional": false
-          },
-          {
-            "param": "scopes",
-            "displayName": "Scope",
-            "description": "Enter the Drive Scope",
-            "type": "STRING",
-            "optional": false
-          }
+        "type": "OAUTH2",
+        "saveBtn": false,
+        "enable": "hasAgreed || isRegistered",
+        "default": false,
+        "nextTab": 1
+      },
+      {
+        "type": "SETTINGS",
+        "enable": "isAuthorized",
+        "nextTab": true,
+        "default": "isAuthorized",
+        "params": [
+          "app"
         ]
       }
-    ],
-    "module": [
-      {
-        "id": "helloworld",
-        "name": "Uploadfile",
-        "hasReturn": true,
-        "param": [
-            {
-              "param": "Googledrivefolderid",
-              "displayName": "Google Drive FolderId",
-              "description": "Enter the Googledrivefolderid Id.",
-              "type": "STRING",
-              "Group": [
-                {
-                  "param": "fileurl",
-                  "displayName": "File Url",
-                  "description": "Enter the File Url.",
-                  "type": "STRING"
-                },
-                {
-                  "param": "filename",
-                  "displayName": "File Name",
-                  "description": "Enter the File Name.",
-                  "type": "STRING"
-                },
-                {
-                  "param": "mimetype",
-                  "displayName": "Mime Type",
-                  "description": "Enter the MimeType.",
-                  "type": "STRING"
-                }
-              ]
-            }
-          ]
-      }
     ]
-  }
+  },
+  "providerData": [
+    {
+      "param": "app",
+      "displayName": "Connect your Drive Account",
+      "description": "",
+      "type": "PARAM",
+      "optional": false,
+      "valueParams": [
+        {
+          "param": "client_id",
+          "displayName": "Client Id",
+          "description": "Enter Drive Client Id",
+          "type": "STRING"
+        },
+        {
+          "param": "client_secret",
+          "displayName": "Client Secret",
+          "description": "Enter the Client Secret",
+          "type": "STRING",
+          "optional": false
+        },
+        {
+          "param": "scopes",
+          "displayName": "Scope",
+          "description": "Enter the Drive Scope",
+          "type": "STRING",
+          "optional": false
+        }
+      ]
+    }
+  ],
+  "module": [
+    {
+      "id": "Uploadfile",
+      "name": "Upload File to Google Drive",
+      "hasReturn": true,
+      "param": [
+        {
+          "param": "Googledrivefolderid",
+          "displayName": "Google Drive FolderId",
+          "description": "Enter the Googledrivefolderid Id.",
+          "type": "STRING"
+        },
+        {
+          "param": "fileurl",
+          "displayName": "File Url",
+          "description": "Enter the File Url.",
+          "type": "STRING"
+        },
+        {
+          "param": "filename",
+          "displayName": "File Name",
+          "description": "Enter the File Name.",
+          "type": "STRING"
+        },
+        {
+          "param": "mimetype",
+          "displayName": "Mime Type",
+          "description": "Enter the MimeType.",
+          "type": "STRING"
+        }
+      ]
+    }
+  ]
+}

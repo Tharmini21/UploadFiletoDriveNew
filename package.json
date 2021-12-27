@@ -14,7 +14,8 @@
     "logs": "extension-scripts logs"
   },
   "dependencies": {
-    "@smartsheet-bridge/extension-handler": "^0.1.2"
+    "@smartsheet-bridge/extension-handler": "^0.1.2",
+    "googleapis": "^92.0.0"
   },
   "devDependencies": {
     "@smartsheet-bridge/extension-scripts": "^0.1.2",
