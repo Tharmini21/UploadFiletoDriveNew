@@ -19,7 +19,6 @@ const scope = [
 ];
 const clientId="218866420163-28if048id8aij2l4iu567poivgvr1a87.apps.googleusercontent.com";
 const clientsecret = "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"
-
 const redirect_uri = "https://system.converse.ai/api/settings/oauth/oauth2callback"
 
   if (clientId === undefined || clientId === null) {
@@ -32,12 +31,14 @@ const redirect_uri = "https://system.converse.ai/api/settings/oauth/oauth2callba
       '<p><cv-button cv-click="authenticate()">Authenticate</cv-button></p>';
     return `<div>${msg}${btn}</div>`;
   }
-  
   const oauth2Client = new google.auth.OAuth2(
     clientId,
     clientsecret,
     redirect_uri
   );
+  google.options({
+    auth: oauth2Client
+  });
   const url = oauth2Client.generateAuthUrl({
     access_type: 'offline',
     scope: scope
@@ -49,5 +50,6 @@ const redirect_uri = "https://system.converse.ai/api/settings/oauth/oauth2callba
     "https://www.googleapis.com/auth/drive"
   );
   response.setComment(getAuthenticateButton());
+  
   return response;
 };

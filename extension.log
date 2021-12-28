@@ -58,7 +58,7 @@
   - {test,tests,mock,mocks,__test__,__tests__,__mock__,__mocks__}/**
 ➤ └ Completed in 0.0s
 ➤ ┌ Cleaning `out` folder
-➤ └ Completed in 0.0s
+➤ └ Completed in 0.1s
 ➤ buildService: allFiles [
   'index.ts',
   'onOAuthHandleCode.ts',
@@ -86,7 +86,7 @@
 ➤ │ Building Uploadfile.ts
 ➤ │ buildService: Transforming Uploadfile C:\Users\Tharmini\projects\UploadfiletoDrive\src\Uploadfile.ts
 ➤ │ buildService: Writing Uploadfile C:\Users\Tharmini\projects\UploadfiletoDrive\lib\Uploadfile.js
-➤ └ Completed in 0.57s
+➤ └ Completed in 0.50s
 ➤ deployService: options {
   include: '**/**',
   exclude: [
@@ -125,7 +125,7 @@
 ➤ │ API Response 200 OK
 ➤ │ API Response: Status 200
 ➤ │ API Response: Headers {
-  date: 'Mon, 27 Dec 2021 17:24:06 GMT',
+  date: 'Tue, 28 Dec 2021 18:04:20 GMT',
   'content-type': 'application/json',
   'content-length': '70',
   connection: 'close',
@@ -139,7 +139,7 @@
   }
 }
 ➤ │ Platform plugindata.converse.ai:443
-➤ └ Completed in 1.20s
+➤ └ Completed in 1.7s
 ➤ ┌ Bundling extension
 ➤ │ deployService: include **/**
 ➤ │ deployService: exclude [
@@ -150,38 +150,6 @@
   'node_modules/**',
   '{test,tests,mock,mocks,__test__,__tests__,__mock__,__mocks__}/**'
 ]
-➤ │ deployService: {
-  name: 'extension.json',
-  sourcePath: 'C:/Users/Tharmini/projects/UploadfiletoDrive/extension.json',
-  type: 'file',
-  sourceType: 'stream',
-  date: 2021-12-27T17:23:53.646Z,
-  mode: 438,
-  prefix: null,
-  stats: Stats {
-    dev: 2493935459,
-    mode: 33206,
-    nlink: 1,
-    uid: 0,
-    gid: 0,
-    rdev: 0,
-    blksize: 4096,
-    ino: 2533274791805074,
-    size: 2187,
-    blocks: 8,
-    atimeMs: 1640625833645.9575,
-    mtimeMs: 1640625833645.9575,
-    ctimeMs: 1640625833645.9575,
-    birthtimeMs: 1640359432647.1072,
-    atime: 2021-12-27T17:23:53.646Z,
-    mtime: 2021-12-27T17:23:53.646Z,
-    ctime: 2021-12-27T17:23:53.646Z,
-    birthtime: 2021-12-24T15:23:52.647Z
-  },
-  linkname: null,
-  store: false,
-  comment: ''
-}
 ➤ │ deployService: {
   name: 'package-lock.json',
   sourcePath: 'C:/Users/Tharmini/projects/UploadfiletoDrive/package-lock.json',
@@ -201,11 +169,11 @@
     ino: 13510798882225020,
     size: 168385,
     blocks: 336,
-    atimeMs: 1640617295361.7896,
+    atimeMs: 1640714469753.8013,
     mtimeMs: 1640596656343.2556,
     ctimeMs: 1640596656353.4739,
     birthtimeMs: 1640596656343.2556,
-    atime: 2021-12-27T15:01:35.362Z,
+    atime: 2021-12-28T18:01:09.754Z,
     mtime: 2021-12-27T09:17:36.343Z,
     ctime: 2021-12-27T09:17:36.353Z,
     birthtime: 2021-12-27T09:17:36.343Z
@@ -233,14 +201,46 @@
     ino: 18014398509595424,
     size: 619,
     blocks: 1,
-    atimeMs: 1640625845655.207,
+    atimeMs: 1640714658714.593,
     mtimeMs: 1640596656295.947,
     ctimeMs: 1640604289483.5818,
     birthtimeMs: 1640596656295.947,
-    atime: 2021-12-27T17:24:05.655Z,
+    atime: 2021-12-28T18:04:18.715Z,
     mtime: 2021-12-27T09:17:36.296Z,
     ctime: 2021-12-27T11:24:49.484Z,
     birthtime: 2021-12-27T09:17:36.296Z
+  },
+  linkname: null,
+  store: false,
+  comment: ''
+}
+➤ │ deployService: {
+  name: 'extension.json',
+  sourcePath: 'C:/Users/Tharmini/projects/UploadfiletoDrive/extension.json',
+  type: 'file',
+  sourceType: 'stream',
+  date: 2021-12-28T11:54:51.619Z,
+  mode: 438,
+  prefix: null,
+  stats: Stats {
+    dev: 2493935459,
+    mode: 33206,
+    nlink: 1,
+    uid: 0,
+    gid: 0,
+    rdev: 0,
+    blksize: 4096,
+    ino: 2533274791805074,
+    size: 2182,
+    blocks: 8,
+    atimeMs: 1640714469761.677,
+    mtimeMs: 1640692491619.0068,
+    ctimeMs: 1640692491619.0068,
+    birthtimeMs: 1640359432647.1072,
+    atime: 2021-12-28T18:01:09.762Z,
+    mtime: 2021-12-28T11:54:51.619Z,
+    ctime: 2021-12-28T11:54:51.619Z,
+    birthtime: 2021-12-24T15:23:52.647Z
   },
   linkname: null,
   store: false,
@@ -265,78 +265,14 @@
     ino: 7599824372594360,
     size: 494,
     blocks: 0,
-    atimeMs: 1640617295353.3264,
+    atimeMs: 1640714469753.8013,
     mtimeMs: 1640358651711.4292,
     ctimeMs: 1640358651711.4292,
     birthtimeMs: 1640358640574.072,
-    atime: 2021-12-27T15:01:35.353Z,
+    atime: 2021-12-28T18:01:09.754Z,
     mtime: 2021-12-24T15:10:51.711Z,
     ctime: 2021-12-24T15:10:51.711Z,
     birthtime: 2021-12-24T15:10:40.574Z
-  },
-  linkname: null,
-  store: false,
-  comment: ''
-}
-➤ │ deployService: {
-  name: 'lib/index.js',
-  sourcePath: 'C:/Users/Tharmini/projects/UploadfiletoDrive/lib/index.js',
-  type: 'file',
-  sourceType: 'stream',
-  date: 2021-12-27T17:24:05.702Z,
-  mode: 438,
-  prefix: null,
-  stats: Stats {
-    dev: 2493935459,
-    mode: 33206,
-    nlink: 1,
-    uid: 0,
-    gid: 0,
-    rdev: 0,
-    blksize: 4096,
-    ino: 3096224745223361,
-    size: 619,
-    blocks: 1,
-    atimeMs: 1640625845702.1033,
-    mtimeMs: 1640625845702.1033,
-    ctimeMs: 1640625845702.1033,
-    birthtimeMs: 1640625845702.1033,
-    atime: 2021-12-27T17:24:05.702Z,
-    mtime: 2021-12-27T17:24:05.702Z,
-    ctime: 2021-12-27T17:24:05.702Z,
-    birthtime: 2021-12-27T17:24:05.702Z
-  },
-  linkname: null,
-  store: false,
-  comment: ''
-}
-➤ │ deployService: {
-  name: 'lib/onOAuthRenewToken.js',
-  sourcePath: 'C:/Users/Tharmini/projects/UploadfiletoDrive/lib/onOAuthRenewToken.js',
-  type: 'file',
-  sourceType: 'stream',
-  date: 2021-12-27T17:24:05.735Z,
-  mode: 438,
-  prefix: null,
-  stats: Stats {
-    dev: 2493935459,
-    mode: 33206,
-    nlink: 1,
-    uid: 0,
-    gid: 0,
-    rdev: 0,
-    blksize: 4096,
-    ino: 1688849861670083,
-    size: 1601,
-    blocks: 8,
-    atimeMs: 1640625845734.99,
-    mtimeMs: 1640625845734.99,
-    ctimeMs: 1640625845734.99,
-    birthtimeMs: 1640625845734.99,
-    atime: 2021-12-27T17:24:05.735Z,
-    mtime: 2021-12-27T17:24:05.735Z,
-    ctime: 2021-12-27T17:24:05.735Z,
-    birthtime: 2021-12-27T17:24:05.735Z
   },
   linkname: null,
   store: false,
@@ -347,7 +283,7 @@
   sourcePath: 'C:/Users/Tharmini/projects/UploadfiletoDrive/lib/onOAuthHandleCode.js',
   type: 'file',
   sourceType: 'stream',
-  date: 2021-12-27T17:24:05.734Z,
+  date: 2021-12-28T18:04:18.795Z,
   mode: 438,
   prefix: null,
   stats: Stats {
@@ -358,17 +294,81 @@
     gid: 0,
     rdev: 0,
     blksize: 4096,
-    ino: 1688849861670082,
-    size: 1504,
+    ino: 34339947158706850,
+    size: 3215,
     blocks: 8,
-    atimeMs: 1640625845733.5273,
-    mtimeMs: 1640625845733.5273,
-    ctimeMs: 1640625845733.5273,
-    birthtimeMs: 1640625845717.8696,
-    atime: 2021-12-27T17:24:05.734Z,
-    mtime: 2021-12-27T17:24:05.734Z,
-    ctime: 2021-12-27T17:24:05.734Z,
-    birthtime: 2021-12-27T17:24:05.718Z
+    atimeMs: 1640714658795.1782,
+    mtimeMs: 1640714658795.1782,
+    ctimeMs: 1640714658795.1782,
+    birthtimeMs: 1640714658795.1782,
+    atime: 2021-12-28T18:04:18.795Z,
+    mtime: 2021-12-28T18:04:18.795Z,
+    ctime: 2021-12-28T18:04:18.795Z,
+    birthtime: 2021-12-28T18:04:18.795Z
+  },
+  linkname: null,
+  store: false,
+  comment: ''
+}
+➤ │ deployService: {
+  name: 'lib/index.js',
+  sourcePath: 'C:/Users/Tharmini/projects/UploadfiletoDrive/lib/index.js',
+  type: 'file',
+  sourceType: 'stream',
+  date: 2021-12-28T18:04:18.761Z,
+  mode: 438,
+  prefix: null,
+  stats: Stats {
+    dev: 2493935459,
+    mode: 33206,
+    nlink: 1,
+    uid: 0,
+    gid: 0,
+    rdev: 0,
+    blksize: 4096,
+    ino: 39406496739497610,
+    size: 652,
+    blocks: 1,
+    atimeMs: 1640714658761.4763,
+    mtimeMs: 1640714658761.4763,
+    ctimeMs: 1640714658761.4763,
+    birthtimeMs: 1640714658761.4763,
+    atime: 2021-12-28T18:04:18.761Z,
+    mtime: 2021-12-28T18:04:18.761Z,
+    ctime: 2021-12-28T18:04:18.761Z,
+    birthtime: 2021-12-28T18:04:18.761Z
+  },
+  linkname: null,
+  store: false,
+  comment: ''
+}
+➤ │ deployService: {
+  name: 'lib/onOAuthRenewToken.js',
+  sourcePath: 'C:/Users/Tharmini/projects/UploadfiletoDrive/lib/onOAuthRenewToken.js',
+  type: 'file',
+  sourceType: 'stream',
+  date: 2021-12-28T18:04:18.811Z,
+  mode: 438,
+  prefix: null,
+  stats: Stats {
+    dev: 2493935459,
+    mode: 33206,
+    nlink: 1,
+    uid: 0,
+    gid: 0,
+    rdev: 0,
+    blksize: 4096,
+    ino: 16607023625946582,
+    size: 1601,
+    blocks: 8,
+    atimeMs: 1640714658810.9297,
+    mtimeMs: 1640714658810.9297,
+    ctimeMs: 1640714658810.9297,
+    birthtimeMs: 1640714658810.9297,
+    atime: 2021-12-28T18:04:18.811Z,
+    mtime: 2021-12-28T18:04:18.811Z,
+    ctime: 2021-12-28T18:04:18.811Z,
+    birthtime: 2021-12-28T18:04:18.811Z
   },
   linkname: null,
   store: false,
@@ -379,7 +379,7 @@
   sourcePath: 'C:/Users/Tharmini/projects/UploadfiletoDrive/lib/onOAuthStart.js',
   type: 'file',
   sourceType: 'stream',
-  date: 2021-12-27T17:24:05.751Z,
+  date: 2021-12-28T18:04:18.827Z,
   mode: 438,
   prefix: null,
   stats: Stats {
@@ -390,17 +390,17 @@
     gid: 0,
     rdev: 0,
     blksize: 4096,
-    ino: 7318349395902671,
-    size: 1885,
+    ino: 27866022694372980,
+    size: 1933,
     blocks: 8,
-    atimeMs: 1640625845750.7212,
-    mtimeMs: 1640625845750.7212,
-    ctimeMs: 1640625845750.7212,
-    birthtimeMs: 1640625845750.7212,
-    atime: 2021-12-27T17:24:05.751Z,
-    mtime: 2021-12-27T17:24:05.751Z,
-    ctime: 2021-12-27T17:24:05.751Z,
-    birthtime: 2021-12-27T17:24:05.751Z
+    atimeMs: 1640714658826.5574,
+    mtimeMs: 1640714658826.5574,
+    ctimeMs: 1640714658826.5574,
+    birthtimeMs: 1640714658826.5574,
+    atime: 2021-12-28T18:04:18.827Z,
+    mtime: 2021-12-28T18:04:18.827Z,
+    ctime: 2021-12-28T18:04:18.827Z,
+    birthtime: 2021-12-28T18:04:18.827Z
   },
   linkname: null,
   store: false,
@@ -411,7 +411,7 @@
   sourcePath: 'C:/Users/Tharmini/projects/UploadfiletoDrive/lib/settings.js',
   type: 'file',
   sourceType: 'stream',
-  date: 2021-12-27T17:24:05.773Z,
+  date: 2021-12-28T18:04:18.827Z,
   mode: 438,
   prefix: null,
   stats: Stats {
@@ -422,17 +422,17 @@
     gid: 0,
     rdev: 0,
     blksize: 4096,
-    ino: 7881299349324148,
+    ino: 15481123719112532,
     size: 1079,
     blocks: 8,
-    atimeMs: 1640625845772.8484,
-    mtimeMs: 1640625845772.8484,
-    ctimeMs: 1640625845772.8484,
-    birthtimeMs: 1640625845766.2646,
-    atime: 2021-12-27T17:24:05.773Z,
-    mtime: 2021-12-27T17:24:05.773Z,
-    ctime: 2021-12-27T17:24:05.773Z,
-    birthtime: 2021-12-27T17:24:05.766Z
+    atimeMs: 1640714658826.5574,
+    mtimeMs: 1640714658826.5574,
+    ctimeMs: 1640714658826.5574,
+    birthtimeMs: 1640714658826.5574,
+    atime: 2021-12-28T18:04:18.827Z,
+    mtime: 2021-12-28T18:04:18.827Z,
+    ctime: 2021-12-28T18:04:18.827Z,
+    birthtime: 2021-12-28T18:04:18.827Z
   },
   linkname: null,
   store: false,
@@ -443,7 +443,7 @@
   sourcePath: 'C:/Users/Tharmini/projects/UploadfiletoDrive/lib/Uploadfile.js',
   type: 'file',
   sourceType: 'stream',
-  date: 2021-12-27T17:24:05.773Z,
+  date: 2021-12-28T18:04:18.858Z,
   mode: 438,
   prefix: null,
   stats: Stats {
@@ -454,24 +454,24 @@
     gid: 0,
     rdev: 0,
     blksize: 4096,
-    ino: 4785074605506941,
-    size: 234,
-    blocks: 0,
-    atimeMs: 1640625845772.8484,
-    mtimeMs: 1640625845772.8484,
-    ctimeMs: 1640625845772.8484,
-    birthtimeMs: 1640625845772.8484,
-    atime: 2021-12-27T17:24:05.773Z,
-    mtime: 2021-12-27T17:24:05.773Z,
-    ctime: 2021-12-27T17:24:05.773Z,
-    birthtime: 2021-12-27T17:24:05.773Z
+    ino: 21392098230038612,
+    size: 1646,
+    blocks: 8,
+    atimeMs: 1640714658857.837,
+    mtimeMs: 1640714658857.837,
+    ctimeMs: 1640714658857.837,
+    birthtimeMs: 1640714658857.837,
+    atime: 2021-12-28T18:04:18.858Z,
+    mtime: 2021-12-28T18:04:18.858Z,
+    ctime: 2021-12-28T18:04:18.858Z,
+    birthtime: 2021-12-28T18:04:18.858Z
   },
   linkname: null,
   store: false,
   comment: ''
 }
-➤ │ checksum 7676e41470fc5234d70065d9c2860ac84fa8765d6b52cea320e91bb916f80c54
-➤ └ Completed in 0.8s
+➤ │ checksum c376d9b690c57493d329f95159252e3f0317b2d88cd73ae11c63f8d9228cd1a5
+➤ └ Completed in 0.7s
 ➤ ┌ Uploading specification
 ➤ │ App token not included
 ➤ │ API Request https://cloudwave.bridge.smartsheet.com/api/plugins/remote
@@ -551,7 +551,7 @@
   module: [
     {
       id: 'Uploadfile',
-      name: 'Upload File to Google Drive',
+      name: 'Upload File to Drive',
       hasReturn: true,
       param: [
         {
@@ -561,8 +561,8 @@
           type: 'STRING'
         },
         {
-          param: 'fileurl',
-          displayName: 'File Url',
+          param: 'filepath',
+          displayName: 'File path',
           description: 'Enter the File Url.',
           type: 'STRING'
         },
@@ -583,14 +583,14 @@
   ],
   invoker: {
     upload: true,
-    checksum: '7676e41470fc5234d70065d9c2860ac84fa8765d6b52cea320e91bb916f80c54'
+    checksum: 'c376d9b690c57493d329f95159252e3f0317b2d88cd73ae11c63f8d9228cd1a5'
   },
   appToken: 'APP_TOKEN'
 }
 ➤ │ API Response 200 OK
 ➤ │ API Response: Status 200
 ➤ │ API Response: Headers {
-  date: 'Mon, 27 Dec 2021 17:24:08 GMT',
+  date: 'Tue, 28 Dec 2021 18:04:21 GMT',
   'content-type': 'application/json',
   'transfer-encoding': 'chunked',
   connection: 'close',
@@ -602,7 +602,7 @@
   plugin: {
     objectUUID: 'BA90325B-6163-4C1D-B8A4-8C6CC0FCE471',
     createTime: 1640606091036867300,
-    lastUpdateTime: 1640606508305057300,
+    lastUpdateTime: 1640714488082074600,
     serviceOwner: '0681A495-A88B-46BE-899F-F364288DF5C4',
     keys: {},
     orderBy: 0,
@@ -610,7 +610,7 @@
     name: 'cloudwave_Uploadfile',
     status: 0,
     codeBlock: '',
-    checksum: 'f3ab7b694f61dca04505530c5a55e208ee5856f612112c09a5741bcb6bf60497',
+    checksum: 'ba5bdc5c598717f76a6d275c8585a1212e3c95c1102fdaed77afc704f183b35d',
     key: 'A0F2127333D568D77D50FFCB65D66E86F784ED6BBB96B16C9F94980B2A6DAC13',
     functions: [],
     isSystem: false,
@@ -721,15 +721,15 @@
       workspaceUUID: '0681A495-A88B-46BE-899F-F364288DF5C4',
       providerDomain: 'cloudwave.bridge.smartsheet.com'
     },
-    callTime: 1640625848,
-    msgid: 'EACBEF79-08C4-40B7-A0C4-D8D31FF2813A',
+    callTime: 1640714661,
+    msgid: '574E0BB9-433B-4E39-A094-5715061B5489',
     installUUID: '19E032EB-1438-4637-8390-F0C600E6AABF',
     pluginUUID: 'BA90325B-6163-4C1D-B8A4-8C6CC0FCE471',
     callToken: {
-      validUntil: 1640626448,
-      signature: 'e0503956592f74666926f3784fd0ce6b566031f2c0de2e89605c149bd641f55c'
+      validUntil: 1640715261,
+      signature: 'fecf890b170cb91eb2bd6276435ea8eb60f8c8b87f8ccf31d245610448aea5d3'
     },
-    revision: 'r1640625848'
+    revision: 'r1640714661'
   }
 }
 ➤ │ deployService: caller {
@@ -746,30 +746,30 @@
     workspaceUUID: '0681A495-A88B-46BE-899F-F364288DF5C4',
     providerDomain: 'cloudwave.bridge.smartsheet.com'
   },
-  callTime: 1640625848,
-  msgid: 'EACBEF79-08C4-40B7-A0C4-D8D31FF2813A',
+  callTime: 1640714661,
+  msgid: '574E0BB9-433B-4E39-A094-5715061B5489',
   installUUID: '19E032EB-1438-4637-8390-F0C600E6AABF',
   pluginUUID: 'BA90325B-6163-4C1D-B8A4-8C6CC0FCE471',
   callToken: {
-    validUntil: 1640626448,
-    signature: 'e0503956592f74666926f3784fd0ce6b566031f2c0de2e89605c149bd641f55c'
+    validUntil: 1640715261,
+    signature: 'fecf890b170cb91eb2bd6276435ea8eb60f8c8b87f8ccf31d245610448aea5d3'
   },
-  revision: 'r1640625848'
+  revision: 'r1640714661'
 }
-➤ └ Completed in 1.7s
+➤ └ Completed in 1.9s
 ➤ ┌ Creating connection
-➤ └ Completed in 0.4s
+➤ └ Completed in 0.3s
 ➤ ┌ Uploading bundle
 ➤ │ Install UUID 19E032EB-1438-4637-8390-F0C600E6AABF
-➤ │ Revision ID r1640625848
-➤ │ UPLOAD CODE 47935 Bytes
+➤ │ Revision ID r1640714661
+➤ │ UPLOAD CODE 49227 Bytes
 ➤ │ deployService: UPLOAD CODE response {
   runtimeVersion: '14.17.6'
 }
 ! │ Your development environment (Node.js v14.17.1) does not match Bridge by Smartsheet's production environment (Node.js v14.17.6)! This may lead to unexpected runtime errors. Please refer to our documentation for more info.
-➤ └ Completed in 13.14s
+➤ └ Completed in 14.26s
 ➤ ┌ Activating revision
-➤ │ API Request https://cloudwave.bridge.smartsheet.com/api/plugins/remote/BA90325B-6163-4C1D-B8A4-8C6CC0FCE471?activate=r1640625848
+➤ │ API Request https://cloudwave.bridge.smartsheet.com/api/plugins/remote/BA90325B-6163-4C1D-B8A4-8C6CC0FCE471?activate=r1640714661
 ➤ │ API Request: Headers {
   common: {
     Accept: 'application/json, text/plain, */*'
@@ -788,13 +788,13 @@
   }
 }
 ➤ │ API Request: Params {
-  activate: 'r1640625848'
+  activate: 'r1640714661'
 }
 ➤ │ API Request: Data {}
 ➤ │ API Response 200 OK
 ➤ │ API Response: Status 200
 ➤ │ API Response: Headers {
-  date: 'Mon, 27 Dec 2021 17:24:22 GMT',
+  date: 'Tue, 28 Dec 2021 18:04:38 GMT',
   'content-type': 'application/json',
   'content-length': '4',
   connection: 'close',
@@ -802,4 +802,4 @@
   'access-control-allow-origin': 'https://cloudwave.bridge.smartsheet.com'
 }
 ➤ │ API Response: Data true
-➤ └ Completed in 1.17s
+➤ └ Completed in 2.54s

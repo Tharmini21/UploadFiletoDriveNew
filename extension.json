@@ -56,7 +56,7 @@
   "module": [
     {
       "id": "Uploadfile",
-      "name": "Upload File to Google Drive",
+      "name": "Upload File to Drive",
       "hasReturn": true,
       "param": [
         {
@@ -66,8 +66,8 @@
           "type": "STRING"
         },
         {
-          "param": "fileurl",
-          "displayName": "File Url",
+          "param": "filepath",
+          "displayName": "File path",
           "description": "Enter the File Url.",
           "type": "STRING"
         },
