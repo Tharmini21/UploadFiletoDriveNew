@@ -5,20 +5,20 @@
   "uiSpec": {
     "providerTabs": [
       {
-        "type": "OAUTH2",
-        "saveBtn": false,
-        "enable": "hasAgreed || isRegistered",
-        "default": false,
-        "nextTab": 1
-      },
-      {
         "type": "SETTINGS",
         "enable": "isAuthorized",
-        "nextTab": true,
+        "nextTab": 1,
         "default": "isAuthorized",
         "params": [
           "app"
         ]
+      },
+      {
+        "type": "OAUTH2",
+        "saveBtn": false,
+        "enable": "hasAgreed || isRegistered",
+        "default": false,
+        "nextTab": true
       }
     ]
   },

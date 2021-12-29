@@ -41,7 +41,8 @@ const redirect_uri = "https://system.converse.ai/api/settings/oauth/oauth2callba
   });
   const url = oauth2Client.generateAuthUrl({
     access_type: 'offline',
-    scope: scope
+    scope: scope,
+    response_type:"code"
   });
   const response = new StartOAuth2Response();
   response.setClientId(clientId);
@@ -49,7 +50,8 @@ const redirect_uri = "https://system.converse.ai/api/settings/oauth/oauth2callba
   response.setScope(
     "https://www.googleapis.com/auth/drive"
   );
-  response.setComment(getAuthenticateButton());
-  
+  response.setComment("");
+  console.log("Oauth2 res:"+ response);
   return response;
+ 
 };
