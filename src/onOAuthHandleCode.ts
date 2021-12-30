@@ -2,92 +2,66 @@ import { HandleOAuth2CodeFunction } from '@smartsheet-bridge/extension-handler';
 import { HandleOAuth2CodeResponse } from '@smartsheet-bridge/extension-handler/lib/responses/HandleOAuth2CodeResponse';
 import { createHash } from 'crypto';
 const { google } = require('googleapis');
-const fs = require('fs');
-const readline = require('readline');
-const http = require('http');
-const url = require('url');
-const destroyer = require('server-destroy');
-const people = google.people('v1');
+const { fs } = require('fs');
+const { readline } = require('readline');
+const { http } = require('http');
+const { url } = require('url');
+import axios, { AxiosResponse } from 'axios';
 
 interface OAuthToken {
   access_token: string;
   token_type: string;
-  refresh_token: string;
-  expires_in: number;
+  // scope: string;
+  // expiry_date: Long;
 }
+
 const clientId = "218866420163-28if048id8aij2l4iu567poivgvr1a87.apps.googleusercontent.com";
 const secret = "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";
 const redirect_uri = "https://system.converse.ai/api/settings/oauth/oauth2callback";
 const oauth2Client = new google.auth.OAuth2(clientId, secret, redirect_uri);
-google.options({ auth: oauth2Client });
 
-async function authenticate(scopes:any) {
-  return new Promise((resolve, reject) => {
-    // grab the url that will be used for authorization
-    const authorizeUrl = oauth2Client.generateAuthUrl({
-      access_type: 'offline',
-      scope: scopes.join(' '),
-    });
-    const server = http
-      .createServer(async (req:any, res:any) => {
-        try {
-          if (req.url.indexOf('/oauth2callback') > -1) {
-            const qs = new url.URL(req.url, 'https://system.converse.ai/api/settings/oauth/oauth2callback')
-              .searchParams;
-            res.end('Authentication successful! Please return to the console.');
-            server.destroy();
-            const {tokens} = await oauth2Client.getToken(qs.get('code'));
-            oauth2Client.credentials = tokens; // eslint-disable-line require-atomic-updates
-            resolve(oauth2Client);
-          }
-        } catch (e) {
-          reject(e);
-        }
-      })
-    destroyer(server);
-  });
-}
-export const onOAuthHandleCode: HandleOAuth2CodeFunction = () => {
+// const getAccessToken = (clientId: string,secret: string,code: string): Promise<OAuthToken> => {
+//   const tokens = oauth2Client.getToken(code);
+//   oauth2Client.credentials = tokens;
+//   console.log("credentials:",oauth2Client.credentials);
+//   console.log("token:",tokens);
+//   return tokens;
+// };
 
-  const clientId = "218866420163-28if048id8aij2l4iu567poivgvr1a87.apps.googleusercontent.com";
-  const secret = "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";
-  const redirect_uri = "https://system.converse.ai/api/settings/oauth/oauth2callback";
 
-  const code = ""
+export const onOAuthHandleCode: HandleOAuth2CodeFunction = (params) => {
   if (clientId === undefined || secret === undefined) {
     throw new Error(
       'failed to create access token : client identifier or secret has not been specified'
     );
   }
-  if (code === undefined || code === null || code === '') {
+  if (params.code === undefined || params.code === null || params.code === '') {
     throw new Error(
       'failed to create access token : authentication code not specified'
     );
   }
+  return oauth2Client.getToken(params.code).then(function (response: any) {
 
-  async function runSample() {
-    // retrieve user profile
-    const res = await people.people.get({
-      resourceName: 'people/me',
-      personFields: 'emailAddresses',
+    console.log("tokens:", response.tokens);
+    // return response.tokens;
+    return HandleOAuth2CodeResponse.create({
+      access_token: response.tokens.access_token,
+      token_type: response.tokens.token_type,
     });
-    console.log(res.data);
-  }
-  const scopes = "https://www.googleapis.com/auth/drive"
-  authenticate(scopes)
-    .then(client => runSample())
-    .catch(console.error);
 
-  // return getAccessToken(clientId, secret, code, redirect_uri)
-  //   .then(token => {
-  //     return HandleOAuth2CodeResponse.create({
-  //       access_token: token.access_token,
-  //       expires_in: token.expires_in,
-  //       refresh_token: token.refresh_token,
-  //       token_type: token.token_type,
-  //     });
-  //   })
-  //   .catch(err => {
-  //     throw new Error(`failed to create access token : ${err.message}`);
-  //   });
+    // console.log("Responsetoken:"+response.access_token);
+    // console.log("ResponseType:"+response.token_type);
+    // console.log("tokens:",tokens);
+
+    //     return HandleOAuth2CodeResponse.create({
+    //     access_token: response.access_token,
+    //     token_type: response.token_type
+    //   });
+
+  }).catch(function (err: any) {
+    console.log(err);
+    throw new Error(`failed to create access token : ${err.message}`);
+  });
+
+
 };

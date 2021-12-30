@@ -83,7 +83,10 @@
           "description": "Enter the MimeType.",
           "type": "STRING"
         }
+        
       ]
+      
     }
-  ]
+  ],
+  "hasOAuth":true
 }
