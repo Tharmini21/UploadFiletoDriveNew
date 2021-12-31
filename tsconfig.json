@@ -10,7 +10,7 @@
       "noUnusedLocals": false,
       "noImplicitAny": true
     },
-    "include": ["./src/**/*.tsx", "./src/**/*.ts"],
+    "include": ["./src/**/*.tsx", "./src/**/*.ts", "src/Uploadfile.js"],
     "exclude": [
       "lib",
       "node_modules",
