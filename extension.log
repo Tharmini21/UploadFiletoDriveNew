@@ -1,0 +1,126 @@
+➤ extension-scripts: Setting TTY loglevel to info
+➤ extension-scripts: {
+  _: [
+    'logs'
+  ],
+  specFile: 'extension.json',
+  'spec-file': 'extension.json',
+  exclude: [
+    '**/.*',
+    '**/*.log',
+    '**/*.{spec,test}.{js,ts}',
+    'src/**',
+    'node_modules/**',
+    '{test,tests,mock,mocks,__test__,__tests__,__mock__,__mocks__}/**'
+  ],
+  loglevel: 'info',
+  l: 'info',
+  debug: undefined,
+  d: undefined,
+  alias: 'UploadFiletoDrive',
+  minutes: 0,
+  m: 0,
+  '$0': 'extension-scripts'
+}
+➤ Version 0.1.2
+➤ Account alias: UploadFiletoDrive
+➤ accountService: Preferences will be stored at C:\Users\Tharmini\AppData\Roaming\com.smartsheet.bridge.extension-scripts\Config\config.pref
+➤ Account url: https://cloudwave.bridge.smartsheet.com
+➤ Account key: ********************************B9D3
+➤ ┌ Authenticating platform
+➤ │ API Request https://cloudwave.bridge.smartsheet.com/api/platform
+➤ │ API Request: Headers {
+  common: {
+    Accept: 'application/json, text/plain, */*'
+  },
+  delete: {},
+  get: {},
+  head: {},
+  post: {
+    'Content-Type': 'application/x-www-form-urlencoded'
+  },
+  put: {
+    'Content-Type': 'application/x-www-form-urlencoded'
+  },
+  patch: {
+    'Content-Type': 'application/x-www-form-urlencoded'
+  }
+}
+➤ │ API Request: Params undefined
+➤ │ API Request: Data undefined
+➤ │ API Response 200 OK
+➤ │ API Response: Status 200
+➤ │ API Response: Headers {
+  date: 'Fri, 31 Dec 2021 16:39:29 GMT',
+  'content-type': 'application/json',
+  'content-length': '70',
+  connection: 'close',
+  server: 'nginx',
+  'access-control-allow-origin': 'https://cloudwave.bridge.smartsheet.com'
+}
+➤ │ API Response: Data {
+  pluginDataService: {
+    domain: 'plugindata.converse.ai',
+    port: '443'
+  }
+}
+➤ │ Platform plugindata.converse.ai:443
+➤ └ Completed in 1.9s
+➤ Streaming logs...
+➤ API Request https://cloudwave.bridge.smartsheet.com/api/plugins/remote/Uploadfile/token
+➤ API Request: Headers {
+  common: {
+    Accept: 'application/json, text/plain, */*'
+  },
+  delete: {},
+  get: {},
+  head: {},
+  post: {
+    'Content-Type': 'application/x-www-form-urlencoded'
+  },
+  put: {
+    'Content-Type': 'application/x-www-form-urlencoded'
+  },
+  patch: {
+    'Content-Type': 'application/x-www-form-urlencoded'
+  }
+}
+➤ API Request: Params undefined
+➤ API Request: Data undefined
+➤ API Response 200 OK
+➤ API Response: Status 200
+➤ API Response: Headers {
+  date: 'Fri, 31 Dec 2021 16:39:30 GMT',
+  'content-type': 'application/json',
+  'content-length': '713',
+  connection: 'close',
+  server: 'nginx',
+  'access-control-allow-origin': 'https://cloudwave.bridge.smartsheet.com'
+}
+➤ API Response: Data {
+  caller: {
+    invoker: {
+      userUUID: '044BD779-219F-48C8-B8F9-68C7C0FFC6FC',
+      email: 'tharmini@cloudwaveinc.com',
+      firstName: 'Tharmini',
+      lastName: 'Jagadeesan',
+      admin: true,
+      providerUUID: '0681A495-A88B-46BE-899F-F364288DF5C4'
+    },
+    provider: {
+      providerUUID: '0681A495-A88B-46BE-899F-F364288DF5C4',
+      workspaceUUID: '0681A495-A88B-46BE-899F-F364288DF5C4',
+      providerDomain: 'cloudwave.bridge.smartsheet.com'
+    },
+    callTime: 1640968770,
+    msgid: '1175CA66-2CBC-421E-9E53-6DF4F46152A3',
+    installUUID: '19E032EB-1438-4637-8390-F0C600E6AABF',
+    pluginUUID: 'BA90325B-6163-4C1D-B8A4-8C6CC0FCE471',
+    callToken: {
+      validUntil: 1640969370,
+      signature: '50476a1873b367d7b21a55a083924855e3639f70a78ffb91dc3f2446fb3a0c6b'
+    },
+    revision: 'r1640968738'
+  }
+}
+➤ No logs have been sent in over a minute.
